@@ -19,7 +19,7 @@ spec:
       - env:
         - name: REDIS_HOST
           value: saythx-redis
-        image: taobeier/saythx-be
+        image: jeanhwea/saythx-be
         name: backend
         ports:
         - containerPort: 8080

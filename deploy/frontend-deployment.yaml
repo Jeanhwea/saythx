@@ -15,7 +15,7 @@ spec:
         app: frontend
     spec:
       containers:
-      - image: taobeier/saythx-fe
+      - image: jeanhwea/saythx-fe
         name: frontend
         ports:
         - containerPort: 80

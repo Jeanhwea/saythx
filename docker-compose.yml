@@ -4,7 +4,7 @@ services:
   saythx-frontend:
     build:
       context: fe/.
-    image: taobeier/saythx-fe
+    image: jeanhwea/saythx-fe
     ports:
       - "8088:80"
     depends_on:
@@ -15,18 +15,18 @@ services:
   saythx-backend:
     build:
       context: be/.
-    image: taobeier/saythx-be
+    image: jeanhwea/saythx-be
     depends_on:
       - saythx-redis
     networks:
       - saythx
     environment:
       - REDIS_HOST=saythx-redis
-    
+
   saythx-work:
     build:
       context: work/.
-    image: taobeier/saythx-work
+    image: jeanhwea/saythx-work
     depends_on:
       - saythx-redis
     networks:
